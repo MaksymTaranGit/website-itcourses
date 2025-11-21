@@ -1,0 +1,62 @@
+<%- include('partials/header')  %>
+
+<main>
+    <div class="container">
+        
+        <div class="enrollment-wrapper">
+            
+            <h1 data-i18n-key="enroll.title">
+                Course Enrollment
+            </h1>
+
+            <form action="#" method="POST" class="enrollment-form">
+                
+                <input type="hidden" name="courseId" value="<%= course.id %>">
+
+                <div class="form-group">
+                    <label for="name"  data-i18n-key="enroll.name">
+                        Name <span>*</span>
+                    </label>
+                    <input type="text" id="name" name="name" placeholder="Name Surname" required 
+                           data-i18n-key="enroll.placeholder.name">
+                </div>
+
+                <div class="form-group">
+                    <label for="email" data-i18n-key="enroll.email">
+                        Email <span>*</span>
+                    </label>
+                    <input type="email" id="email" name="email" placeholder="student@email.com" required 
+                           data-i18n-key="enroll.placeholder.email">
+                </div>
+
+                <div class="form-group">
+                    <label for="phone" data-i18n-key="enroll.phone">
+                        Phone (optional)
+                    </label>
+                    <input type="tel" id="phone" name="phone" placeholder="+380445354398" 
+                           data-i18n-key="enroll.placeholder.phone">
+                </div>
+
+                <button type="submit" class="btn-submit" 
+                        data-i18n-key="enroll.submit">
+                    Submit Enrollment
+                </button>
+
+            </form>
+
+            <div class="enrollment-links" style="display: flex; flex-direction: column;">
+                <a href="/course/<%= course.id %>" style="color: #0EA5E9; text-decoration: underline;" data-i18n-key="enroll.backCourse">
+                    Back to Course
+                </a>
+                
+                <a href="/courses" style="color: #0EA5E9; text-decoration: underline;" data-i18n-key="enroll.backAll">
+                    Back to all Courses
+                </a>
+            </div>
+
+        </div>
+    </div>
+</main>
+
+
+<%- include('partials/footer') %>
