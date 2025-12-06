@@ -25,8 +25,10 @@ public/scss/
 ├── themes/      # (Reserved for themes)
 ├── vendors/     # Third-party libraries
 └── main.scss    # Main file that gathers all modules (@use)
+```
+---
 
-## ✨ Implemented Features (SCSS & Layout)
+## Implemented Features (SCSS & Layout)
 
 ### 1. Custom Grid System (Bonus 🏆)
 Instead of using ready-made libraries (like Bootstrap), a custom grid system was built using SCSS mixins and `sass:math` functions.
