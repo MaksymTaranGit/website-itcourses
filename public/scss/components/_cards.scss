@@ -1,0 +1,159 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+
+.course-card-item {
+    background-color: v.$color-white;
+    border: 1px solid v.$color-border;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        border-color: transparent;
+    }
+
+    img {
+        width: 100%;
+        height: f.rem(120);
+    }
+
+    .card-body {
+        padding: f.rem(20);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        h3{
+            @include m.text-style(20px, 600, v.$color-black, "Inter");
+            margin-bottom: f.rem(10);
+        }
+
+        p{
+            @include m.text-style(16px, 400, v.$color-black, "Inter");
+            margin-bottom: f.rem(12); 
+            svg {
+                width: 24px;
+                height: 24px;
+                color: v.$color-black;
+            }
+        }
+    }
+
+    .card-stats {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: f.rem(20);
+        color: v.$color-black;
+        width: f.rem(140);
+
+        span {
+        display: flex;
+        align-items: center;
+        gap: f.rem(4);
+        }
+    }
+}
+
+
+.category-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: f.rem(10);
+    padding: f.rem(20);
+    
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    border-radius: 12px;
+    transition: all 0.35s ease;
+
+    span {
+        font-weight: 600;
+        font-size: f.rem(20);
+        font-family: v.$font-primary;
+    }
+
+    svg {
+        flex-shrink: 0;
+        width: 36px;
+        height: 36px;
+    }
+
+    &:hover {
+        background-color: f.shade(v.$color-primary, 10%);
+        transform: translateY(-3px);
+    }
+}
+
+
+.enrollment-card {
+    background-color: v.$color-white;
+    border: 1px solid v.$color-border;
+    border-radius: 12px;
+    padding: f.rem(24);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); 
+    text-align: center;
+
+    .price-block {
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        gap: f.rem(10);
+        margin-bottom: f.rem(20);
+
+        .current-price {
+            @include m.text-style(32px, 700, v.$color-black, "Inter");
+        }
+
+        .old-price {
+            @include m.text-style(18px, 400, null, "Inter");
+            color: rgba(v.$color-black, 0.5);
+            text-decoration: line-through;
+        }
+    }
+
+    .btn-enroll {
+        width: 100%;
+        margin-bottom: f.rem(24);
+        @include m.text-style(20, 500, v.$color-white, v.$font-primary);
+        background-color: v.$color-primary;
+    }
+
+    .course-features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+
+        border-top: 1px solid v.$color-border;
+        padding-top: f.rem(20);
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: f.rem(12);
+            margin-bottom: f.rem(12);
+
+            @include m.text-style(14px, 400, v.$color-black, v.$font-secondary);
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            svg {
+                width: 18px;
+                height: 18px;
+                color: v.$color-black;
+                flex-shrink: 0;
+            }
+        }
+    }
+}

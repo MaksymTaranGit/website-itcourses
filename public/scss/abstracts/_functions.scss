@@ -1,0 +1,18 @@
+@use "sass:math";
+@use "sass:color";
+
+@function rem($value) {
+    @if not math.is-unitless($value) {
+        @return math.div($value, 16px) * 1rem;
+    } @else {
+        @return math.div($value, 16) + rem;
+    }
+}
+
+@function tint($color, $percentage) {
+    @return color.mix(white, $color, $percentage);
+}
+
+ @function shade($color, $percentage){
+    @return color.mix(black, $color, $percentage);
+ }

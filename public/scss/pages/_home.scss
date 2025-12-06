@@ -1,0 +1,159 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+
+.whyus-section {
+    background-color: v.$color-white;
+    padding: f.rem(80) 0;
+    
+    @include m.mobile {
+        padding: f.rem(40) 0;
+    }
+
+    h2 {
+        text-align: center;
+        @include m.text-style(48px, 600, v.$color-black, v.$font-primary);
+        margin-bottom: f.rem(60);
+
+        @include m.mobile {
+            font-size: f.rem(28);
+            margin-bottom: f.rem(30);
+        }
+    }
+
+    .whyus-list {
+        @include m.row;
+        justify-content: center;
+        row-gap: f.rem(40);
+
+        li {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: f.rem(20);
+
+            @include m.col(3);
+
+            @include m.mobile {
+                @include m.col(6);
+                gap: f.rem(10);
+            }
+
+            svg {
+                width: f.rem(109);
+                height: f.rem(109);
+                color: v.$color-primary;
+
+                @include m.mobile {
+                    width: f.rem(60);
+                    height: f.rem(60);
+                }
+            }
+
+            h3 {
+                @include m.text-style(32px, 600, v.$color-black, v.$font-primary);
+
+                @include m.mobile {
+                    font-size: f.rem(20);
+                }
+            }
+        }
+    }
+}
+
+
+.stories-section {
+    padding: f.rem(80) 0;
+
+    @include m.mobile {
+        padding: f.rem(40) 0;
+    }
+
+    h2 {
+        text-align: center;
+
+        @include m.text-style(48px, 600, v.$color-black, v.$font-primary);
+        margin-bottom: f.rem(35);
+
+        @include m.mobile {
+            font-size: f.rem(28);
+            margin-bottom: f.rem(15);
+        }
+    }
+
+    .stories-list {
+        @include m.row;
+        row-gap: f.rem(40);
+
+        .story-card {
+            @include m.col(4);
+            
+            display: flex;
+            align-items: center;
+            gap: f.rem(20);
+
+            @include m.mobile {
+                @include m.col(12);
+                justify-content: center;
+                text-align: left;
+            }
+
+            img {                
+                &.mark {
+                    width: f.rem(100);
+                    height: f.rem(150);
+                }
+
+                &.john {
+                    width: f.rem(90);
+                    height: f.rem(135);
+                }
+
+                &.anna {
+                    width: f.rem(110);
+                    height: f.rem(165);
+                }
+            }
+
+            .story-content {
+                @include m.text-style(16px, 400, v.$color-black, v.$font-secondary, 1.5);
+                .name {
+                    @include m.text-style(20px, 600, v.$color-black, v.$font-secondary, 1.5);
+                    @include m.mobile {
+                        font-size: f.rem(18);
+                        align-items: center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.top-categories-section {
+    h2 {
+      text-align: center;
+      margin-bottom: f.rem(40);
+      @include m.text-style(48px, 600, v.$color-black, v.$font-primary);
+    }
+
+    .categories-grid {
+      @include m.row;
+      
+      row-gap: f.rem(30); 
+
+      li {
+        @include m.col(4);
+
+        @include m.tablet {
+          @include m.col(6);
+        }
+
+        @include m.mobile {
+          @include m.col(12);
+        }
+      }
+    }
+}
+

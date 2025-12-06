@@ -1,0 +1,192 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.site-footer {
+    display: flex;
+    background-color: v.$color-dark;
+    color: v.$color-white;
+    margin-top: f.rem(200);
+    min-height: f.rem(265);
+    padding: f.rem(20) 0;
+
+    @include m.mobile {
+        margin-top: f.rem(150);
+        min-height: f.rem(346);
+        padding: f.rem(40) 0;
+    }
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        @include m.mobile {
+            flex-direction: column;
+            gap: f.rem(40);
+            align-items: center;
+        }
+    }
+
+
+    .footer-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        @include m.mobile {
+            gap: f.rem(30);
+            align-items: center; 
+            text-align: center;
+            //justify-content: center;
+        }
+    }
+
+    .logo {
+        span {
+            @include m.text-style(40px, 600, v.$color-white, "Inter");
+        }
+        svg {
+            width: f.rem(52);
+            height: f.rem(52);
+        }
+
+        @include m.mobile {
+            justify-content: center;
+            span { font-size: f.rem(24); }
+            svg { width: f.rem(26); height: f.rem(26); }
+        }
+    }
+
+    .social-links {
+        display: flex;
+        gap: f.rem(15);
+        margin: 0 0 f.rem(15) 0;
+        padding: 0;
+        list-style: none;
+
+        @include m.mobile {
+            justify-content: center;
+        }
+
+        a {
+            display: flex;
+            
+            svg {
+
+                width: f.rem(24);
+                height: f.rem(24);
+
+                @include m.mobile {
+                    width: f.rem(30);
+                    height: f.rem(30);
+                }
+            }
+            
+            &:hover {
+                opacity: 0.8;
+                transform: translateY(-2px);
+            }
+        }
+    }
+
+
+    .copyright {
+        @include m.text-style(16px, 400, v.$color-white, v.$font-secondary);
+        opacity: 0.8;
+
+        @include m.mobile {
+            font-size: f.rem(14);
+        }
+    }
+
+    .footer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+
+        @include m.mobile {
+            align-items: center;
+            text-align: left;
+        }
+    }
+
+
+    .footer-contacts {
+        font-style: normal;
+        margin-bottom: f.rem(35);
+
+        @include m.mobile {
+            margin-bottom: f.rem(32);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-item {
+            @include m.text-style(16px, 400, v.$color-white, v.$font-secondary);
+            
+
+            &:not(:last-child) {
+                margin-bottom: f.rem(18);
+            }
+
+            @include m.mobile {
+                font-size: f.rem(14);
+                
+                &:not(:last-child) {
+                    margin-bottom: f.rem(12);
+                }
+            }
+
+            a {
+                color: inherit;
+                text-decoration: none;
+                &:hover { text-decoration: underline; }
+            }
+        }
+    }
+
+    .footer-nav {
+        
+        @include m.mobile {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .nav-title {
+            @include m.text-style(16px, 400, v.$color-white, v.$font-secondary);
+            margin: 0 0 f.rem(10) 0;
+        }
+
+        ul {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+
+            li {
+                @include m.text-style(16px, 400, v.$color-white, v.$font-secondary);
+                
+                &:not(:last-child) {
+                    margin-bottom: f.rem(18);
+                }
+
+                @include m.mobile {
+                    font-size: f.rem(14);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &:not(:last-child) {
+                        margin-bottom: f.rem(15);
+                    }
+                }
+
+                a:hover {
+                    color: v.$color-cta;
+                }
+            }
+        }
+    }
+}

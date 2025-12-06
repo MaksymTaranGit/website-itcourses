@@ -1,0 +1,52 @@
+@use "../abstracts/variables" as v;
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ul, ol {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column; 
+    background-color: v.$color-white;
+    overflow-x: hidden; 
+}
+
+main {
+    flex: 1;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+input, button, textarea, select {
+    font: inherit; 
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}

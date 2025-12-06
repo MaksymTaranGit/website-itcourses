@@ -1,0 +1,73 @@
+@use "sass:math";
+@use "variables" as v;
+@use "functions" as f;
+
+@mixin tablet {
+    @media (min-width: (v.$bp-tablet + 1px)) and (max-width: (v.$bp-desktop - 1px)) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: (v.$bp-tablet - 1)){
+        @content;
+    }
+}
+
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+//CUSTOM GRID SYSTEM
+@mixin container {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: f.rem(60);
+    padding-right: f.rem(60);
+    max-width: f.rem(v.$container-width);
+
+    @include mobile {
+        padding-left: f.rem(15);
+        padding-right: f.rem(15);
+    }
+}
+
+@mixin row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: f.rem(-15); 
+    margin-right: f.rem(-15);
+}
+
+@mixin col($size, $columns: 12) {
+    $width: math.percentage(math.div($size, $columns));
+    flex: 0 0 $width;
+    max-width: $width;
+
+    padding-left: f.rem(15);
+    padding-right: f.rem(15);
+}
+
+@mixin text-style($size, $weight: 400, $color: null, $family: null, $line-height: 1.2) {
+    font-size: $size;
+    font-weight: $weight;
+    line-height: $line-height;
+
+    @if $color {
+        color: $color;
+    }
+
+    @if $family {
+        font-family: $family;
+    }
+}
+

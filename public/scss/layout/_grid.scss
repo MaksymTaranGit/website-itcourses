@@ -1,0 +1,16 @@
+@use "../abstracts/mixins" as m;
+
+.container {
+    @include m.container;
+}
+
+.row {
+    @include m.row;
+}
+
+@for $i from 1 through 12 {
+    .col-#{$i} {
+        @include m.col($i);
+    }
+}
+

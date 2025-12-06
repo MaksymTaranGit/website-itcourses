@@ -1,0 +1,89 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.course-details-section {
+    padding: f.rem(60) 0;
+
+    @include m.mobile {
+        padding: f.rem(40) 0;
+    }
+
+    .details-layout {
+        display: flex;
+        align-items: flex-start;
+        gap: f.rem(60);
+
+        @include m.mobile {
+            flex-direction: column-reverse; 
+            gap: f.rem(40);
+        }
+    }
+
+    .course-main-content {
+        flex: 1;
+
+        h2 {
+            @include m.text-style(40px, 600, v.$color-black, "Inter");
+            margin-bottom: f.rem(24);
+
+            @include m.mobile {
+                font-size: f.rem(26);
+                margin-bottom: f.rem(16);
+            }
+        }
+
+        p, li {
+            @include m.text-style(16px, 400, v.$color-black, v.$font-secondary, 1.6);
+            margin-bottom: f.rem(16);
+
+            @include m.mobile {
+                font-size: f.rem(15);
+            }
+        }
+
+        .overview-block,
+        .learning-block,
+        .content-block,
+        .requirements-block {
+            margin-bottom: f.rem(60);
+
+            @include m.mobile {
+                margin-bottom: f.rem(40);
+            }
+        }
+
+        .learning-list, .lessons-list {
+            list-style: decimal;
+            padding-left: f.rem(20);
+            
+            li {
+                margin-bottom: f.rem(10);
+                padding-left: f.rem(5);
+            }
+        }
+
+        .requirements-list {
+            list-style: disc;
+            padding-left: f.rem(20);
+            
+            li {
+                margin-bottom: f.rem(10);
+                padding-left: f.rem(5);
+            }
+        }
+    }
+
+    .course-sidebar {
+        width: f.rem(360);
+        flex-shrink: 0;
+
+        position: sticky;
+        top: f.rem(100);
+
+        @include m.mobile {
+            width: 100%;
+            position: static;
+        }
+    }
+}

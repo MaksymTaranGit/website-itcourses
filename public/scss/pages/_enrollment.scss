@@ -1,0 +1,67 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.enrollment-wrapper {
+    max-width: f.rem(500);
+    margin: f.rem(60) auto;
+    text-align: center;
+
+    @include m.mobile {
+        margin: f.rem(40) auto;
+        padding: 0 f.rem(20);
+    }
+
+    h1 {
+        @include m.text-style(40px, 700, v.$color-black, "Inter");
+        margin-bottom: f.rem(40);
+
+        @include m.mobile {
+            font-size: f.rem(28);
+            margin-bottom: f.rem(30);
+        }
+    }
+
+    .enrollment-form {
+        text-align: left;
+        margin-bottom: f.rem(30);
+
+        .btn-submit {
+            width: 100%;
+            margin-top: f.rem(10);
+            
+            box-shadow: 0 4px 14px rgba(250, 204, 21, 0.4); 
+
+            font-size: f.rem(24);
+            padding: f.rem(18);
+
+            @include m.mobile {
+                font-size: f.rem(18);
+                padding: f.rem(16);
+            }
+
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 6px 20px rgba(250, 204, 21, 0.6);
+            }
+        }
+    }
+
+    .enrollment-links {
+        display: flex;
+        flex-direction: column;
+        gap: f.rem(15);
+        align-items: center;
+
+        a {
+            @include m.text-style(16px, 500, v.$color-primary, v.$font-secondary);
+            text-decoration: underline;
+            transition: opacity 0.2s;
+
+            &:hover {
+                opacity: 0.8;
+                text-decoration: none;
+            }
+        }
+    }
+}

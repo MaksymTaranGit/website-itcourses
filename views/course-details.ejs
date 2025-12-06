@@ -1,14 +1,14 @@
 <%- include('partials/header') %>
 
-<section class="course-hero-section" style="background-color: #00338E; color: white; padding: 60px 0;">
+<section class="course-hero-section">
     <div class="container">
         
-        <div class="course-hero-wrapper" style="display: flex; align-items: center; gap: 50px;">
+        <div class="course-hero-wrapper">
             
-            <div class="course-image" style="flex: 1; min-width: 300px;">
+            <div class="course-image">
                 <img src="<%= course.img %>" 
                      alt="<%= course.title %> cover" 
-                     style="width: 100%; height: auto;">
+                    >
             </div>
 
             <div class="course-info">
@@ -28,9 +28,9 @@
 
 <section class="course-details-section">
     <div class="container">
-        
+
         <div class="details-layout">
-            
+
             <div class="course-main-content">
                 
                 <div class="overview-block">
@@ -42,19 +42,16 @@
 
                 <div class="learning-block">
                     <h2 data-i18n-key="course.whatYouLearn">What you’ll learn</h2>
-                    
-                    <ul class="learning-list">
+
+                    <ol class="learning-list">
                         <% if (course.whatYouWillLearn && course.whatYouWillLearn.length > 0) { %>
                             <% course.whatYouWillLearn.forEach(item => { %>
                                 <li>
-                                    <svg class="icon-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                        <polyline points="20 6 9 17 4 12"></polyline>
-                                    </svg>
                                     <span><%= item %></span>
                                 </li>
                             <% }) %>
                         <% } %>
-                    </ul>
+                    </ol>
                 </div>
 
                 <div class="content-block">
@@ -73,7 +70,7 @@
 
                 <div class="requirements-block">
                     <h2 data-i18n-key="course.requirements">Requirements</h2>
-                    
+
                     <ul class="requirements-list">
                         <% if (course.requirements && course.requirements.length > 0) { %>
                             <% course.requirements.forEach(req => { %>
@@ -83,9 +80,7 @@
                     </ul>
                 </div>
 
-            </div>
-
-            </div>
+            </div> 
 
             <aside class="course-sidebar">
                 
@@ -101,40 +96,28 @@
                     </a>
 
                     <ul class="course-features-list">
-                        
                         <li>
-                            <svg class="icon-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                             <span><%= course.duration %> duration</span>
                         </li>
-
                         <li>
-                            <svg class="icon-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"></line><line x1="18" y1="20" x2="18" y2="4"></line><line x1="6" y1="20" x2="6" y2="16"></line></svg>
                             <span><%= course.level %> level</span>
                         </li>
-
                         <li>
-                            <svg class="icon-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                             <span data-i18n-key="course.certificate">Certificate of completion</span>
                         </li>
-
                         <li>
-                            <svg class="icon-check" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <polyline points="20 6 9 17 4 12"></polyline>
-                            </svg>
-                            <span>Average rating:<%= course.rating %></span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                            <span>Average rating: <%= course.rating %></span>
                         </li>
                     </ul>
 
                 </div>
             </aside>
 
-        </div>
+        </div> 
     </div>
 </section>
 

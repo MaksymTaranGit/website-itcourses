@@ -1,6 +1,6 @@
 <%- include('partials/header')  %>
 
-<section class="courses-hero" aria-labelledby="catalog-title" style="background-color: #00338E; color: white;">
+<section class="courses-hero" aria-labelledby="catalog-title">
     <div class="container">
         <div class="hero-content">
             
@@ -84,38 +84,39 @@
                 <button type="button" class="btn-sort">Price</button>
             </div>
 
-            <div class="courses-grid-list" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+            <div class="courses-grid-list">
                 
                 <% courses.forEach(course => { %>
-                    
-                    <article class="course-card-item">
-                        
-                        <img src="<%= course.img %>" alt="<%= course.title %> thumbnail">
-                        
-                        <div class="card-body">
-                            <h3><%= course.title %></h3>
+                    <div class="grid-col">
+                        <article class="course-card-item">
                             
-                            <p>
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                                <%= course.author %>
-                            </p>
+                            <img src="<%= course.img %>" alt="<%= course.title %> thumbnail">
                             
-                            <div class="card-stats">
-                                <span><%= course.students %> users</span>
-                                <span>
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                                    <%= course.rating %>
-                                </span>
+                            <div class="card-body">
+                                <h3><%= course.title %></h3>
+                                
+                                <p>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                    <%= course.author %>
+                                </p>
+                                
+                                <div class="card-stats">
+                                    <span><%= course.students %> users</span>
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="#FFC107" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                        <%= course.rating %>
+                                    </span>
+                                </div>
+                                
+                                <a href="/course/<%= course.id %>" class="btn-details">
+                                    View Details
+                                </a>
                             </div>
-                            
-                            <a href="/course/<%= course.id %>" class="btn-details">
-                                View Details
-                            </a>
-                        </div>
-                    </article>
+                        </article>
+                    </div>
                     <% }); %>
                 </div>
-        </div>
+            </div>
     </div>
 </section>
 

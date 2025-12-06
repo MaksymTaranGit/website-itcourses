@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+@use "../abstracts/functions" as f;
+
+.btn, .btn-details, .btn-submit, .btn-enroll {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: f.rem(12) f.rem(24);
+    border-radius: f.rem(12);
+    
+    font-family: v.$font-primary;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: all 0.35s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+}
+
+.btn-primary{
+    background-color: v.$color-primary;
+    font-size: f.rem(20);
+}
+
+.btn-cta,.btn-enroll, .btn-submit {
+    background-color: v.$color-cta;
+    color: v.$color-black;
+    
+    &:hover {
+        background-color: f.tint(v.$color-cta, 10%);
+    }
+}
+
+.btn-details {
+    background-color: v.$color-primary;
+    color: v.$color-white;
+    width: 100%;
+    
+    &:hover {
+        background-color: f.shade(v.$color-primary, 10%);
+    }
+}
+
+
+.btn-sort {
+    width: f.rem(100);
+    height: f.rem(50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 f.rem(12);
+
+    background-color: v.$color-light;
+    border: 1px solid v.$color-border;
+    color: v.$color-black;
+    border-radius: f.rem(12);
+
+    &:hover {
+        border-color: v.$color-primary;
+        color: v.$color-primary;
+        transform: none;
+    }
+
+    &.active {
+        background-color: v.$color-primary;
+        color: v.$color-white;
+        border-color: v.$color-primary;
+        cursor: default;
+        
+        &:hover {
+        background-color: v.$color-primary;
+        color: v.$color-white;
+        }
+    }
+}
