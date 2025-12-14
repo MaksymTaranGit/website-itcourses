@@ -83,3 +83,24 @@
         }
     }
 }
+
+.btn-page {
+    padding: f.rem(8) f.rem(16);
+    border: 1px solid v.$color-border;
+    background-color: v.$color-white;
+    color: v.$color-black;
+    border-radius: f.rem(4);
+    cursor: pointer;
+    font-weight: 500;
+    
+    &:hover {
+        border-color: v.$color-primary;
+        color: v.$color-primary;
+    }
+
+    &.active {
+        background-color: v.$color-primary;
+        color: v.$color-white;
+        border-color: v.$color-primary;
+    }
+}

@@ -5,8 +5,10 @@
   "source": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js",
-    "scss": "sass --watch public/scss/main.scss:public/css/styles.css"
+    "server": "nodemon server.js",
+    "api": "json-server --watch db.json --port 3004",
+    "scss": "sass --watch public/scss/main.scss:public/css/styles.css",
+    "dev": "concurrently \"npm run server\" \"npm run api\" \"npm run scss\""
   },
   "keywords": [],
   "author": "",
@@ -14,9 +16,11 @@
   "type": "commonjs",
   "dependencies": {
     "ejs": "^3.1.10",
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "json-server": "^0.17.4"
   },
   "devDependencies": {
+    "concurrently": "^9.2.1",
     "nodemon": "^3.1.11",
     "sass": "^1.94.2"
   }

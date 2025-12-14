@@ -550,6 +550,25 @@ body {
   color: #ffffff;
 }
 
+.btn-page {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-page:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+}
+.btn-page.active {
+  background-color: #0ea5e9;
+  color: #ffffff;
+  border-color: #0ea5e9;
+}
+
 .hero-section {
   background-color: #00338e;
   color: #ffffff;
@@ -990,6 +1009,10 @@ body {
 }
 .course-search-form .search-wrapper .search-input:focus {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+  display: none !important;
 }
 
 .whyus-section {

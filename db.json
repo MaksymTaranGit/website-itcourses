@@ -1,0 +1,689 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "title": "Python for Beginners",
+      "author": "Walter White",
+      "rating": 4.9,
+      "students": "1.9k",
+      "img": "/images/python-course.png",
+      "category": "backend",
+      "level": "beginner",
+      "price": 19.99,
+      "oldPrice": 49.99,
+      "duration": "12 hours",
+      "durationCategory": "medium",
+      "description": "Python for Beginners: From Zero to Hero. Learn Python programming with simple explanations and interesting tasks in this course!",
+      "overview": "This course is designed to introduce you to the basics of Python programming. You will start with fundamental concepts and gradually build up your skills.",
+      "whatYouWillLearn": [
+        "Program development concepts in Python",
+        "How to use Pycharm to make Python programs",
+        "Understand computer science concepts",
+        "Python decisions and looping"
+      ],
+      "lessons": [
+        "Introduction",
+        "Python Basics",
+        "Strings Part 1",
+        "Functions",
+        "Flow control"
+      ],
+      "requirements": [
+        "Computer",
+        "Access to the Internet",
+        "An interest in learning Python"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Basics of HTML",
+      "author": "Jesse Pinkman",
+      "rating": 4.9,
+      "students": "1.49k",
+      "img": "/images/html-course.png",
+      "category": "frontend",
+      "level": "beginner",
+      "price": 14.99,
+      "oldPrice": 29.99,
+      "duration": "8 hours",
+      "durationCategory": "short",
+      "description": "Master the building blocks of the web. Create structure for your websites with semantic HTML5 tags.",
+      "overview": "Learn HTML5 from scratch. Build semantic websites with proper structure and accessibility standards.",
+      "whatYouWillLearn": [
+        "HTML5 Tags",
+        "Semantic Markup",
+        "Forms & Inputs",
+        "SEO basics"
+      ],
+      "lessons": [
+        "Intro to Web",
+        "Basic Tags",
+        "Attributes",
+        "Lists & Tables",
+        "Forms",
+        "Multimedia"
+      ],
+      "requirements": [
+        "Computer",
+        "Text Editor (VS Code)"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cybersecurity Basics",
+      "author": "Laura Scott",
+      "rating": 4.6,
+      "students": "1.45k",
+      "img": "/images/cybersecurity-course.png",
+      "category": "security",
+      "level": "intermediate",
+      "price": 25,
+      "oldPrice": 50,
+      "duration": "15 hours",
+      "durationCategory": "medium",
+      "description": "Learn how to protect systems and networks. A comprehensive introduction to the world of cybersecurity.",
+      "overview": "Understand the landscape of modern cyber threats and learn how to defend against them.",
+      "whatYouWillLearn": [
+        "Network Security",
+        "Ethical Hacking Basics",
+        "Cryptography",
+        "Risk Management"
+      ],
+      "lessons": [
+        "Intro to Security",
+        "Common Threats",
+        "Network Defense",
+        "Cryptography 101",
+        "Security Policies"
+      ],
+      "requirements": [
+        "Computer",
+        "Basic networking knowledge"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Fundamentals of C++",
+      "author": "James Smith",
+      "rating": 4.8,
+      "students": "1.4k",
+      "img": "/images/c++-course.png",
+      "category": "development",
+      "level": "advanced",
+      "price": 30,
+      "oldPrice": 60,
+      "duration": "40 hours",
+      "durationCategory": "long",
+      "description": "Dive deep into C++. Understand memory management, pointers, and object-oriented programming.",
+      "overview": "Deep dive into C++ for performance critical applications. Learn how software really works under the hood.",
+      "whatYouWillLearn": [
+        "Pointers & References",
+        "Memory Management",
+        "OOP Principles",
+        "STL Library"
+      ],
+      "lessons": [
+        "Syntax & Types",
+        "Control Flow",
+        "Pointers",
+        "Classes & Objects",
+        "Inheritance",
+        "Templates"
+      ],
+      "requirements": [
+        "Computer",
+        "Logic & Math basics"
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Data Science Basics",
+      "author": "Emma Davice",
+      "rating": 4.5,
+      "students": "1.4k",
+      "img": "/images/datascience-course.png",
+      "category": "data",
+      "level": "beginner",
+      "price": 22.99,
+      "oldPrice": 45,
+      "duration": "18 hours",
+      "durationCategory": "medium",
+      "description": "Start your journey in Data Science. Learn data analysis, visualization and basic algorithms.",
+      "overview": "Data is the new oil. Learn how to extract value from data using Python libraries.",
+      "whatYouWillLearn": [
+        "Data Analysis with Pandas",
+        "Visualization with Matplotlib",
+        "Basic Statistics",
+        "Intro to Machine Learning"
+      ],
+      "lessons": [
+        "What is Data Science?",
+        "Python for Data",
+        "NumPy & Pandas",
+        "Data Cleaning",
+        "Visualization"
+      ],
+      "requirements": [
+        "Computer",
+        "Basic Python knowledge is a plus"
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Game Development",
+      "author": "Daniel Taylor",
+      "rating": 4.6,
+      "students": "1.3k",
+      "img": "/images/gamedev-course.png",
+      "category": "gamedev",
+      "level": "beginner",
+      "price": 29.99,
+      "oldPrice": 59.99,
+      "duration": "25 hours",
+      "durationCategory": "medium",
+      "description": "Create your first game with Unity and C#. From idea to playable prototype.",
+      "overview": "Learn the fundamentals of game design and development using the industry-standard Unity engine.",
+      "whatYouWillLearn": [
+        "Unity Interface",
+        "C# Scripting",
+        "Game Physics",
+        "UI & Animation"
+      ],
+      "lessons": [
+        "Unity Setup",
+        "Your First Scene",
+        "Player Movement",
+        "Enemies & AI",
+        "Game Loop",
+        "UI & Menus"
+      ],
+      "requirements": [
+        "PC/Mac capable of running Unity"
+      ]
+    },
+    {
+      "id": 7,
+      "title": "AI for Programming",
+      "author": "Peter Parker",
+      "rating": 4.1,
+      "students": "1.4k",
+      "img": "/images/ai-course.png",
+      "category": "ai",
+      "level": "beginner",
+      "price": 15.99,
+      "oldPrice": 35,
+      "duration": "10 hours",
+      "durationCategory": "short",
+      "description": "Learn how to use AI tools like ChatGPT and Copilot to code faster and better.",
+      "overview": "AI is changing how we code. Learn to use AI assistants effectively to boost your productivity.",
+      "whatYouWillLearn": [
+        "Prompt Engineering",
+        "Code Generation",
+        "Debugging with AI",
+        "Refactoring"
+      ],
+      "lessons": [
+        "Intro to LLMs",
+        "Effective Prompting",
+        "GitHub Copilot",
+        "ChatGPT for Code",
+        "Ethics of AI"
+      ],
+      "requirements": [
+        "Computer",
+        "Basic coding knowledge"
+      ]
+    },
+    {
+      "id": 8,
+      "title": "QA Beginner Course",
+      "author": "Sophia Anderson",
+      "rating": 4.8,
+      "students": "1.5k",
+      "img": "/images/qa-course.png",
+      "category": "qa",
+      "level": "beginner",
+      "price": 18.99,
+      "oldPrice": 40,
+      "duration": "14 hours",
+      "durationCategory": "medium",
+      "description": "Start your career in Quality Assurance. Manual testing basics and introduction to automation.",
+      "overview": "Quality Assurance is a critical part of software development. Learn how to find bugs and ensure quality.",
+      "whatYouWillLearn": [
+        "Manual Testing",
+        "Bug Reporting (Jira)",
+        "Test Cases",
+        "Intro to Automation"
+      ],
+      "lessons": [
+        "What is QA?",
+        "SDLC",
+        "Types of Testing",
+        "Writing Test Cases",
+        "Bug Lifecycle",
+        "Jira Basics"
+      ],
+      "requirements": [
+        "Computer",
+        "Attention to detail"
+      ]
+    },
+    {
+      "id": 9,
+      "title": "iOS Dev with Swift",
+      "author": "Tim Cook",
+      "rating": 4.9,
+      "students": "2.2k",
+      "img": "/images/swift-course.png",
+      "category": "mobile",
+      "level": "intermediate",
+      "price": 35.99,
+      "oldPrice": 75,
+      "duration": "45 hours",
+      "durationCategory": "long",
+      "description": "Build stunning iPhone and iPad apps with Swift 5 and SwiftUI.",
+      "overview": "A complete guide to the iOS ecosystem. Build real-world apps and publish them to the App Store.",
+      "whatYouWillLearn": [
+        "Swift Programming",
+        "SwiftUI Layouts",
+        "Networking",
+        "App Store Publishing"
+      ],
+      "lessons": [
+        "Swift Basics",
+        "UI Components",
+        "State Management",
+        "API Integration",
+        "Publishing"
+      ],
+      "requirements": [
+        "Mac computer"
+      ]
+    },
+    {
+      "id": 10,
+      "title": "Docker & Kubernetes",
+      "author": "DevOps Guy",
+      "rating": 4.7,
+      "students": "1.1k",
+      "img": "/images/docker-course.png",
+      "category": "devops",
+      "level": "advanced",
+      "price": 39.99,
+      "oldPrice": 80,
+      "duration": "18 hours",
+      "durationCategory": "medium",
+      "description": "Master containerization and orchestration for modern software deployment.",
+      "overview": "Learn how to package applications in Docker containers and manage them at scale with Kubernetes.",
+      "whatYouWillLearn": [
+        "Docker Files & Images",
+        "Docker Compose",
+        "Kubernetes Pods & Services",
+        "CI/CD Pipelines"
+      ],
+      "lessons": [
+        "Container Basics",
+        "Building Images",
+        "Networking",
+        "K8s Intro",
+        "Deployments"
+      ],
+      "requirements": [
+        "Linux basics",
+        "Terminal usage"
+      ]
+    },
+    {
+      "id": 11,
+      "title": "UI/UX Design Fundamentals",
+      "author": "Sarah Art",
+      "rating": 4.6,
+      "students": "3.5k",
+      "img": "/images/uiux-course.png",
+      "category": "design",
+      "level": "beginner",
+      "price": 19.99,
+      "oldPrice": 49.99,
+      "duration": "9 hours",
+      "durationCategory": "short",
+      "description": "Learn the principles of user interface and user experience design using Figma.",
+      "overview": "Design beautiful and functional interfaces. Understand user needs and create prototypes.",
+      "whatYouWillLearn": [
+        "Design Theory",
+        "Color & Typography",
+        "Figma Mastery",
+        "Prototyping"
+      ],
+      "lessons": [
+        "Design Thinking",
+        "Figma Basics",
+        "Wireframing",
+        "High-fidelity Design",
+        "Testing"
+      ],
+      "requirements": [
+        "Computer",
+        "Figma account"
+      ]
+    },
+    {
+      "id": 12,
+      "title": "Advanced Java",
+      "author": "James Gosling Fan",
+      "rating": 4.5,
+      "students": "900",
+      "img": "/images/java-course.png",
+      "category": "backend",
+      "level": "advanced",
+      "price": 29.99,
+      "oldPrice": 60,
+      "duration": "60 hours",
+      "durationCategory": "long",
+      "description": "Master Java Enterprise Edition, Spring Boot, and Microservices architecture.",
+      "overview": "Take your Java skills to the enterprise level. Build scalable backend systems.",
+      "whatYouWillLearn": [
+        "Spring Boot",
+        "Hibernate",
+        "Microservices",
+        "REST APIs"
+      ],
+      "lessons": [
+        "Spring Core",
+        "Dependency Injection",
+        "Database Access",
+        "Security",
+        "Deployment"
+      ],
+      "requirements": [
+        "Solid Java knowledge"
+      ]
+    },
+    {
+      "id": 13,
+      "title": "React Native Mobile Apps",
+      "author": "Native Nick",
+      "rating": 4.7,
+      "students": "1.8k",
+      "img": "/images/reactnative-course.png",
+      "category": "mobile",
+      "level": "intermediate",
+      "price": 24.99,
+      "oldPrice": 55,
+      "duration": "20 hours",
+      "durationCategory": "medium",
+      "description": "Build cross-platform mobile apps for iOS and Android using React.",
+      "overview": "Use your web development skills to build native mobile applications.",
+      "whatYouWillLearn": [
+        "React Native Components",
+        "Navigation",
+        "Native Device Features",
+        "State Management"
+      ],
+      "lessons": [
+        "Setup",
+        "Basic Components",
+        "Styling",
+        "Navigation",
+        "Camera & Maps"
+      ],
+      "requirements": [
+        "React basics",
+        "JavaScript"
+      ]
+    },
+    {
+      "id": 14,
+      "title": "AWS Cloud Practitioner",
+      "author": "Cloudy Clara",
+      "rating": 4.8,
+      "students": "4k",
+      "img": "/images/aws-course.png",
+      "category": "cloud",
+      "level": "beginner",
+      "price": 29.99,
+      "oldPrice": 59.99,
+      "duration": "15 hours",
+      "durationCategory": "medium",
+      "description": "Prepare for the AWS Certified Cloud Practitioner exam.",
+      "overview": "Understand the fundamentals of cloud computing and the AWS ecosystem.",
+      "whatYouWillLearn": [
+        "Cloud Concepts",
+        "Security & Compliance",
+        "Technology",
+        "Billing & Pricing"
+      ],
+      "lessons": [
+        "Cloud Intro",
+        "EC2 & S3",
+        "IAM & Security",
+        "Databases",
+        "Architecting"
+      ],
+      "requirements": [
+        "None"
+      ]
+    },
+    {
+      "id": 15,
+      "title": "Blockchain & Solidity",
+      "author": "Crypto Chris",
+      "rating": 4.3,
+      "students": "800",
+      "img": "/images/blockchain-course.png",
+      "category": "blockchain",
+      "level": "intermediate",
+      "price": 49.99,
+      "oldPrice": 100,
+      "duration": "8 hours",
+      "durationCategory": "short",
+      "description": "Learn how to build Smart Contracts and DApps on Ethereum.",
+      "overview": "Dive into the world of Web3. Write, test, and deploy smart contracts.",
+      "whatYouWillLearn": [
+        "Blockchain Theory",
+        "Solidity Language",
+        "Remix IDE",
+        "Web3.js"
+      ],
+      "lessons": [
+        "Blockchain Basics",
+        "Solidity Syntax",
+        "Smart Contracts",
+        "Deployment",
+        "Frontend Integration"
+      ],
+      "requirements": [
+        "JS knowledge",
+        "Basic programming logic"
+      ]
+    },
+    {
+      "id": 16,
+      "title": "Rust for Systems",
+      "author": "Rusty Russ",
+      "rating": 4.9,
+      "students": "600",
+      "img": "/images/rust-course.png",
+      "category": "backend",
+      "level": "advanced",
+      "price": 34.99,
+      "oldPrice": 70,
+      "duration": "24 hours",
+      "durationCategory": "medium",
+      "description": "Learn Rust programming language for high-performance applications.",
+      "overview": "Memory safety without garbage collection. Build fast and reliable software.",
+      "whatYouWillLearn": [
+        "Ownership & Borrowing",
+        "Concurrency",
+        "Cargo & Crates",
+        "Error Handling"
+      ],
+      "lessons": [
+        "Intro to Rust",
+        "Memory Safety",
+        "Structs & Enums",
+        "Advanced Concepts",
+        "Project"
+      ],
+      "requirements": [
+        "C/C++ knowledge recommended"
+      ]
+    },
+    {
+      "id": 17,
+      "title": "SEO & Digital Marketing",
+      "author": "Marketer Mary",
+      "rating": 4.6,
+      "students": "2.5k",
+      "img": "/images/seo-course.png",
+      "category": "marketing",
+      "level": "beginner",
+      "price": 12.99,
+      "oldPrice": 30,
+      "duration": "6 hours",
+      "durationCategory": "short",
+      "description": "Boost your website traffic and learn modern digital marketing strategies.",
+      "overview": "Learn how to rank higher on Google and reach your target audience.",
+      "whatYouWillLearn": [
+        "Keyword Research",
+        "On-page SEO",
+        "Content Marketing",
+        "Analytics"
+      ],
+      "lessons": [
+        "SEO Basics",
+        "Keywords",
+        "Content Strategy",
+        "Social Media",
+        "Tools"
+      ],
+      "requirements": [
+        "None"
+      ]
+    },
+    {
+      "id": 18,
+      "title": "Advanced Machine Learning",
+      "author": "AI Alex",
+      "rating": 4.7,
+      "students": "1.2k",
+      "img": "/images/ml-course.png",
+      "category": "ai",
+      "level": "advanced",
+      "price": 44.99,
+      "oldPrice": 89.99,
+      "duration": "55 hours",
+      "durationCategory": "long",
+      "description": "Deep learning, Neural Networks, and Computer Vision.",
+      "overview": "Take your AI skills to the next level with deep learning architectures.",
+      "whatYouWillLearn": [
+        "TensorFlow & Keras",
+        "CNNs & RNNs",
+        "NLP",
+        "Model Deployment"
+      ],
+      "lessons": [
+        "Neural Nets",
+        "Deep Learning",
+        "Computer Vision",
+        "NLP",
+        "Production"
+      ],
+      "requirements": [
+        "Python",
+        "Math",
+        "Basic ML"
+      ]
+    },
+    {
+      "id": 19,
+      "title": "Fullstack MERN Bootcamp",
+      "author": "Fullstack Phil",
+      "rating": 4.8,
+      "students": "3k",
+      "img": "/images/mern-course.png",
+      "category": "web",
+      "level": "intermediate",
+      "price": 39.99,
+      "oldPrice": 80,
+      "duration": "80 hours",
+      "durationCategory": "long",
+      "description": "Become a fullstack developer with MongoDB, Express, React, and Node.",
+      "overview": "Build complete web applications from database to frontend.",
+      "whatYouWillLearn": [
+        "REST API Design",
+        "React Hooks",
+        "Authentication",
+        "Deployment"
+      ],
+      "lessons": [
+        "Backend Setup",
+        "Database",
+        "Frontend Logic",
+        "State Management",
+        "Auth",
+        "Deploy"
+      ],
+      "requirements": [
+        "HTML/CSS/JS"
+      ]
+    },
+    {
+      "id": 20,
+      "title": "Kotlin for Android",
+      "author": "Android Andy",
+      "rating": 4.7,
+      "students": "1.6k",
+      "img": "/images/kotlin-course.png",
+      "category": "mobile",
+      "level": "intermediate",
+      "price": 24.99,
+      "oldPrice": 50,
+      "duration": "22 hours",
+      "durationCategory": "medium",
+      "description": "Modern Android development with Kotlin and Jetpack Compose.",
+      "overview": "Build beautiful native Android apps using the latest tools from Google.",
+      "whatYouWillLearn": [
+        "Kotlin Syntax",
+        "Android Studio",
+        "Jetpack Compose",
+        "Room Database"
+      ],
+      "lessons": [
+        "Kotlin Intro",
+        "Android UI",
+        "Navigation",
+        "Data Persistence",
+        "API Calls"
+      ],
+      "requirements": [
+        "Computer capable of running Android Studio"
+      ]
+    }
+  ],
+  "enrollments": [
+    {
+      "courseId": "1",
+      "name": "Maksym Taran",
+      "email": "maximillian2006.taran@gmail.com",
+      "phone": "",
+      "date": "2025-12-14T17:38:32.439Z",
+      "id": 1
+    },
+    {
+      "courseId": "1",
+      "name": "Test User",
+      "email": "test@email.com",
+      "phone": "+380999431300",
+      "date": "2025-12-14T20:26:58.041Z",
+      "id": 2
+    },
+    {
+      "courseId": "1",
+      "name": "NewUser",
+      "email": "student@email.com",
+      "phone": "",
+      "date": "2025-12-14T20:31:36.565Z",
+      "id": 3
+    }
+  ]
+}

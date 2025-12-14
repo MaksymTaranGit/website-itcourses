@@ -1,20 +1,42 @@
 # Discendi — IT Courses Platform
 
-Web Development Lab Project. A multi-page website implemented using Server Side Rendering (SSR) technologies and a professional SCSS architecture.
+**Discendi** is a Web Development Lab project — a multi-page website transformed into a **Single Page Application (SPA)**.  
+The project demonstrates clean architecture, modular JavaScript, professional SCSS structure, and dynamic data handling.
+
+---
 
 ## 🛠 Tech Stack
 
-* **Backend:** Node.js, Express.js
-* **Templating:** EJS (Embedded JavaScript templates)
-* **Styling:** SCSS (Sass), BEM (Block Element Modifier) methodology
-* **Tools:** Nodemon (dev server), Sass compiler
+### Frontend
+- JavaScript
+- Axios
+
+### Backend
+- Node.js
+- Express.js
+- JSON Server (REST API)
+
+### Templating
+- HTML5
+- EJS (used as initial templates, later converted to JS views)
+
+### Styling
+- SCSS (Sass)
+- 7-1 methodology
+
+
+### Tools
+- Nodemon
+- Sass Compiler
+- Concurrently
 
 ---
 
 ## 📂 Project Architecture
 
-The project implements the **7-1 Pattern for SCSS**, ensuring scalability and easy style maintenance:
+The project follows a **clean separation of concerns** and a **modular MVC-like architecture**.
 
+### 🎨 SCSS Structure (7–1 Pattern)
 ```text
 public/scss/
 ├── abstracts/   # Variables, mixins, functions (do not generate CSS)
@@ -28,35 +50,90 @@ public/scss/
 ```
 ---
 
-## Implemented Features (SCSS & Layout)
+### 🧠 JavaScript Structure (MVC-like)
+```text
+public/js/
+├── api/
+│ ├── http.js # Base Axios wrapper
+│ └── items-service.js # API service for courses & enrollments
+├── lib/
+│ └── Router.js # Custom Hash Router logic
+├── views/
+│ ├── HomeView.js # Home page rendering
+│ ├── CatalogView.js # Catalog page (filters, search, sorting)
+│ ├── DetailsView.js # Course details page
+│ ├── EnrollmentView.js # Enrollment form logic
+│ ├── ListView.js # Course cards rendering component
+│ └── PaginationView.js # Pagination component
+└── app.js # Application entry point
+```
+---
 
-### 1. Custom Grid System (Bonus 🏆)
-Instead of using ready-made libraries (like Bootstrap), a custom grid system was built using SCSS mixins and `sass:math` functions.
-* **Mixins:** `row`, `col($size)`, `container`.
-* **Logic:** Percentage-based width calculation, support for "gutters" via padding and negative margins.
-* **Responsiveness:** Changing the number of columns for Mobile/Tablet/Desktop.
+## Implemented Features
 
-### 2. SCSS Functions & Mixins
-* **`rem($pixels)`**: A function to automatically convert pixels to relative `rem` units.
-* **`text-style(...)`**: A universal mixin for typography (size, weight, color, font-family, line-height).
-* **`mobile`, `tablet`**: Mixins for media queries (Desktop First approach).
-* **`tint()`, `shade()`**: Functions to generate color shades (lighter/darker) for hover effects.
+### 1. Single Page Application (SPA) 🚀
 
-### 3. Responsive Design
-The website is fully adapted for mobile devices, tablets, and desktops.
-* **Desktop First:** Base styles are written for large screens (1440px+).
-* **Mobile Version:**
-    * Implemented burger menu in the header.
-    * Card grid transformation (3 per row -> 1 per row).
-    * Adaptation of Hero banners (hiding decorative images, centering text).
+- **Custom Hash Router**
+  - Navigation without page reloads:
+    - `#/`
+    - `#/courses`
+    - `#/course/:id`
+    - `#/enroll/:id`
 
-### 4. Dynamic Rendering (EJS)
-* **Routing:**
-    * `/` — Home Page.
-    * `/courses` — Courses Catalog (list generation via `forEach` loop).
-    * `/course/:id` — Course Details Page (data pulled from an object array by ID).
-    * `/enroll/:id` — Enrollment Page (passing course ID into a hidden form field).
-* **Components:** Reusable parts (Header, Footer) are extracted into `partials`.
+- **Dynamic Rendering**
+  - Pages are rendered client-side using JavaScript classes and template literals
+
+---
+
+### 2. Advanced Catalog Logic 🔍
+
+- **API Integration**
+  - Data fetched from JSON Server using Axios
+
+- **Live Search**
+  - Real-time search by course title
+
+- **Filters**
+  - Category
+  - Difficulty level
+  - Duration
+
+- **Sorting**
+  - Price
+  - Rating
+  - Newest courses
+
+- **Pagination**
+  - Server-side pagination (`_page`, `_limit`)
+
+---
+
+### 3. Forms & Data Handling 📝
+
+
+- **POST Requests**
+  - Enrollment data submission to `/enrollments`
+
+- **Success Feedback**
+  - UI updates after successful submission without page reload
+
+---
+
+### 4. Styles & Layout (SCSS) 🎨
+
+- **Custom Grid System**
+  - 12-column grid implemented via SCSS mixins (`row`, `col`)
+
+- **Responsive Design**
+  - Fully adaptive for Desktop, Tablet, and Mobile
+
+- **Theming**
+  - Centralized variables for colors, fonts, and spacing
+
+- **Utilities**
+  - Custom SCSS functions for:
+    - `rem()` conversion
+    - Color manipulation
 
 ---
 
@@ -69,8 +146,11 @@ The website is fully adapted for mobile devices, tablets, and desktops.
 2. **Start the server (development mode):**
    ```bash
    npm run dev
-The server will start at http://localhost:3000
+This command runs simultaneously:
+- Express Server — http://localhost:3000
+- JSON Server API — http://localhost:3004
+- SCSS Compiler — watch mode
 
-3. **Start the SCSS compiler (in a separate terminal):**
+3. **Open the application:**
    ```bash
-    npm run scss
+    http://localhost:3000
